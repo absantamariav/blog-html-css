@@ -15,28 +15,46 @@
 
 <body>
     <header>
-        <p>Setup</p>
-        <ol>
-            <li><a href="#google-chrome">Google Chrome</a></li>
-            <li><a href="#visual-studio">Visual Studio Code</a></li>
-            <li><a href="#figma">Figma</a></li>
-            <li><a href="#github">GitHub</a></li>
-        </ol>
-        <p>Conceptos escenciales del Desarrollo Web</p>
-        <ol>
-            <li><a href="#que-es-html">Qué es HTML</a></li>
-            <li><a href="#etiquetas">Etiquetas</a></li>
-            <li><a href="#dom">DOM</a></li>
-            <li><a href="#semantica">Semántica</a></li>
-            <li><a href="#atributos">Atributos</a></li>
-            <li><a href="#css">Qué es CSS</a></li>
-        </ol>
+        <nav>
+            <details open>
+                <summary>Setup</summary>
+                <ol>
+                    <li><a href="#google-chrome">Google Chrome</a></li>
+                    <li><a href="#visual-studio">Visual Studio Code</a></li>
+                    <li><a href="#figma">Figma</a></li>
+                    <li><a href="#github">GitHub</a></li>
+                </ol>
+            </details>
+            <details open>
+                <summary>Conceptos escenciales del Desarrollo Web</summary>
+                <ol>
+                    <li><a href="#que-es-html">Qué es HTML</a></li>
+                    <li><a href="#etiquetas">Etiquetas</a></li>
+                    <li><a href="#dom">DOM</a></li>
+                    <li><a href="#semantica">Semántica</a></li>
+                    <li><a href="#atributos">Atributos</a></li>
+                    <li><a href="#css">Qué es CSS</a></li>
+                </ol>
+            </details>
         </nav>
     </header>
     <h1>Curso escencial de HTML y CSS</h1>
     <p class="nice">Este es el inicio de tu carrera como Desarrollador Web, empezarás aprendiendo HTML y CSS para la
         creación de
         contenidos, en el nivel 2 aprenderás de componentes y en 3 sobre layouts.</p>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
     <h2>Setup</h2>
     <a href="http://google.com" target="_blank" rel="noopener noreferrer">
         <img src="/images/Google-Chrome.png" alt="logo de google chrome" title="logo de google chrome">
@@ -120,6 +138,38 @@
     <img src="/images/leonidas.png" alt="foto de leonidas" title="leonidas alentandote a programar">
     <p>si tienes alguna pregunta escribeme a <a href="mailto:me@leonidasesteban.com">me@leonidasesteban.com</a></p>
 
+    <form action="/" method="get">
+        <fieldset>
+            <legend>Información Personal</legend>
+            <label style="display: block; height: 30px; width: fit-content;">Nombre:
+                <input type="text" name="name" placeholder="Anderson Santamaria" required>
+            </label>
+            <label style="display: block; height: 30px; width: fit-content;">Email:
+                <input type="email" name="email" placeholder="hola@ejemplo.com" required>
+            </label>
+            <label style="display: block; height: 30px; width: fit-content;">Sexo:
+                <select name="sexo">
+                    <option selected disabled>Seleccione una opción</option>
+                    <option value="hombre">Hombre</option>
+                    <option value="mujer">Mujer</option>
+                    <option value="no-especificado">Prefiero no decirlo</option>
+                </select>
+            </label>
+            <label for="pais">País:</label>
+            <input list="paises" id="pais" name="pais" placeholder="Escribe tu país">
+            <datalist id="paises">
+                <option value="Mexico">
+                <option value="España">
+                <option value="Argentina">
+                <option value="Colombia">
+            </datalist>
+            <hr>
+            <label for="comment">Escribe un comentario:</label>
+            <textarea id="comment" name="comentario" rows="4" cols="30" style="display: block;"></textarea>
+            <br>
+            <button>Enviar contacto</button>
+        </fieldset>
+    </form>
 </body>
 
 </html>
