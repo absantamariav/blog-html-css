@@ -1,0 +1,52 @@
+:root {
+    --gray30: #212121;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+body {
+    color: var(--gray30);
+    font-family: charter;
+}
+
+h1 {
+    font-size: 3.75em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+header {
+    font-size: 14px;
+    color: #616161;
+}
+
+nav details summary {
+    color: var(--gray30);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header a:hover {
+    color: var(--gray30);
+}
