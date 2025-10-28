@@ -1,0 +1,153 @@
+:root {
+    --gray30: #212121;
+    --gray20: #616161;
+    --gray10: #424242;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-regular.otf');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold.otf');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-italic.otf');
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: charter;
+    src: url('../fonts/charter-bold-italic.otf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+body {
+    color: var(--gray30);
+    font-family: roboto, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3.75em;
+    margin-top: 64px;
+    margin-bottom: 16px;
+}
+
+p {
+    line-height: 24px;
+}
+
+hr {
+    margin: 64px 0;
+}
+
+.section-content+hr {
+    display: none;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: normal;
+    margin: 64px 0 40px 0;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+header {
+    font-size: 14px;
+    color: var(--gray20)
+}
+
+nav details summary {
+    color: var(--gray30);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header a:hover {
+    color: var(--gray30);
+}
+
+pre {
+    background-color: #FEC62E;
+    padding: 40px 0 0 40pX;
+    font-family: inherit;
+    line-height: 24px;
+}
+
+blockquote {
+    margin: 32px;
+}
+
+.section-content blockquote q {
+    color: var(--gray10);
+}
+
+blockquote p::before {
+    content: "- ";
+    color: var(--gray20);
+}
+
+.hero {
+    background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png');
+    height: 350px;
+    background-size: 16%;
+}
+
+.section-content img {
+    margin-top: 40px;
+}
+
+.section-content {
+    counter-reset: titlelist;
+    margin-top: 156px;
+}
+
+.section-content:first-of-type {
+    margin: 0;
+}
+
+.section-content h3 {
+    counter-increment: tittlelist;
+}
+
+.section-content h3::before {
+    content: counter(tittlelist) ". ";
+}
+
+.section-content ul li {
+    margin: 16px 0;
+}
+
+.section-content ol li {
+    line-height: 24px;
+}
+
+.section-content h3::after {
+    /* display: block; */
+    content: "";
+    /* margin-top: 4px; */
+    width: 32px;
+    height: 4px;
+    background-color: var(--gray30);
+    display: inline-block;
+}

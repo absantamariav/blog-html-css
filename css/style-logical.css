@@ -1,5 +1,6 @@
 :root {
     --gray30: #212121;
+    --gray20: #616161;
 }
 
 @font-face {
@@ -49,7 +50,7 @@ h3 {
 
 header {
     font-size: 14px;
-    color: #616161;
+    color: var(--gray20)
 }
 
 nav details summary {
@@ -73,4 +74,25 @@ pre {
     background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png');
     height: 350px;
     background-size: 16%;
+}
+
+.section-content {
+    counter-reset: titlelist;
+}
+
+.section-content h3 {
+    counter-increment: tittlelist;
+}
+
+.section-content h3::before {
+    content: counter(tittlelist) ". ";
+}
+
+.section-content h3::after {
+    display: block;
+    content: "";
+    margin-top: 10px;
+    width: 32px;
+    height: 4px;
+    background-color: var(--gray30);
 }
