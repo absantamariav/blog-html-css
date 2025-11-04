@@ -4,6 +4,10 @@
     --gray10: #424242;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: charter;
     src: url('../fonts/charter-regular.otf');
@@ -32,6 +36,20 @@
     font-weight: bold;
 }
 
+.wrapper {
+    width: 902px;
+    margin: auto;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+}
+
+.header-content {
+    position: relative;
+}
+
 body {
     color: var(--gray30);
     font-family: roboto, sans-serif;
@@ -42,6 +60,7 @@ h1 {
     font-size: 3.75em;
     margin-top: 64px;
     margin-bottom: 16px;
+    font-weight: normal;
 }
 
 p {
@@ -67,15 +86,28 @@ h3 {
     font-weight: normal;
     margin-top: 16px;
     margin-bottom: 24px;
+    position: sticky;
+    background-color: white;
+    top: 0;
 }
 
 header {
     font-size: 14px;
-    color: var(--gray20)
+    color: var(--gray20);
+    position: absolute;
+    top: 64px;
+    width: 188px;
+    left: -232px;
+}
+
+header li {
+    margin: 16px 0;
 }
 
 nav details summary {
     color: var(--gray30);
+    font-weight: bold;
+    line-height: 24px;
 }
 
 a {
@@ -94,8 +126,11 @@ pre {
     line-height: 24px;
 }
 
-blockquote {
-    margin: 32px;
+.section-content blockquote {
+    margin: 32px 0;
+    padding-left: 16px;
+    font-size: 24px;
+    border-left: 4px solid var(--gray30);
 }
 
 .section-content blockquote q {
@@ -110,7 +145,6 @@ blockquote p::before {
 .hero {
     background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url('../images/pattern.png');
     height: 350px;
-    background-size: 16%;
 }
 
 .section-content img {
@@ -143,11 +177,12 @@ blockquote p::before {
 }
 
 .section-content h3::after {
-    /* display: block; */
     content: "";
-    /* margin-top: 4px; */
     width: 32px;
     height: 4px;
     background-color: var(--gray30);
     display: inline-block;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
 }
