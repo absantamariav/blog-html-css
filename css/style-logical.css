@@ -5,6 +5,10 @@
     --gray10: #616161;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--white30);
     font-family: nunito, sans-serif;
@@ -50,9 +54,26 @@ h3 {
     margin-block: 16px;
 }
 
+.header {
+    position: sticky;
+    inset-block-start: -45px;
+}
+
+.header-content {
+    position: relative;
+}
+
 header {
     font-size: 14px;
-    color: var(--white10)
+    color: var(--white10);
+    position: absolute;
+    inset-block-start: 80px;
+    inset-inline-start: -250px;
+    inline-size: 188px;
+}
+
+header li {
+    margin-block-end: 16px;
 }
 
 nav details summary {
@@ -120,12 +141,12 @@ blockquote p::before {
     content: counter(tittlelist) ". ";
 }
 
-.section-content:last-of-type h3::before {
+.section-content:nth-of-type(3) h3::before {
     content: none
 }
 
-ul,
-ol {
+.section-content:nth-of-type(3) ul,
+.section-content:nth-of-type(3) ol {
     list-style-position: inside;
     padding-inline-start: 0;
 }
@@ -143,4 +164,39 @@ ol {
 .wrapper {
     max-inline-size: 636px;
     margin-inline: auto;
+}
+
+.slider-container {
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    overflow-x: hidden;
+    font-size: 0;
+}
+
+.video {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+    text-align: center;
+}
+
+.slider-bullet {
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background-color: white;
+    border-radius: 50%;
+    margin-inline: 10px;
+    margin-block-start: 10px
+}
+
+.slider-bullet:hover {
+    background-color: #5551FF;
 }
