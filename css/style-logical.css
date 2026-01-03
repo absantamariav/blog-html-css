@@ -200,3 +200,43 @@ blockquote p::before {
 .slider-bullet:hover {
     background-color: #5551FF;
 }
+
+aside p {
+    color: var(--white30);
+    margin-block-start: 51px;
+}
+
+aside a {
+    text-decoration: revert;
+    color: #5551FF;
+}
+
+div.section-content:nth-of-type(2) h2 {
+    margin-block-start: 40px;
+    margin-block-end: 16px;
+}
+
+.section-content .form input {
+    inline-size: 100%;
+    border: 1px solid var(--white30);
+    background-color: #251F24;
+    margin-block-end: 24px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    block-size: 48px;
+    padding-block: 12px;
+    padding-inline-start: 16px;
+    color: var(--white30);
+    font-size: 16px;
+    display: block;
+}
+
+/* .section-content .form ::placeholder para buscadores modernos*/
+.section-content .form ::-webkit-input-placeholder {
+    color: var(--white10);
+}
+
+.section-content .form input[type="submit"] {
+    background-color: #157EFB;
+    border: none;
+}

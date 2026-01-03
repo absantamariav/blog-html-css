@@ -43,7 +43,7 @@ html {
 
 .header {
     position: sticky;
-    top: 0;
+    top: -40px;
 }
 
 .header-content {
@@ -152,12 +152,16 @@ blockquote p::before {
     display: block;
 }
 
-.section-content {
+section.section-content {
     counter-reset: titlelist;
     margin-top: 156px;
 }
 
-.section-content:first-of-type {
+div.section-content:first-of-type {
+    margin-top: 156px;
+}
+
+section.section-content:first-of-type {
     margin: 0;
 }
 
@@ -213,12 +217,57 @@ blockquote p::before {
     display: inline-block;
     inline-size: 15px;
     block-size: 15px;
-    background-color: white;
+    background-color: var(--gray10);
     border-radius: 50%;
     margin-inline: 10px;
     margin-block-start: 10px
 }
 
 .slider-bullet:hover {
-    background-color: #5551FF;
+    background-color: #FEC62E;
+}
+
+aside p {
+    margin-block-start: 51px;
+}
+
+aside a {
+    text-decoration: revert;
+    color: #5551FF;
+}
+
+div.section-content:nth-of-type(2) h2 {
+    margin-block-start: 40px;
+    margin-block-end: 16px;
+}
+
+div.section-content .form input {
+    inline-size: 280px;
+    border: 1px solid var(--gray20);
+    background-color: white;
+    margin-block-end: 24px;
+    box-sizing: border-box;
+    border-radius: 90px;
+    block-size: 48px;
+    padding-block: 12px;
+    padding-inline-start: 16px;
+    color: var(--gray30);
+    font-size: 16px;
+    display: inline-block;
+}
+
+div.section-content .form input:nth-of-type(2) {
+    margin-inline: 16px;
+}
+
+/* .section-content .form ::placeholder para buscadores modernos*/
+.section-content .form ::-webkit-input-placeholder {
+    color: var(--gray10);
+}
+
+.section-content .form input[type="submit"] {
+    background-color: #000;
+    inline-size: 179px;
+    color: white;
+    border: none;
 }

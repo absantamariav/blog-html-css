@@ -9,7 +9,7 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://ander.dev">
     <link rel="alternate" href="https://ander.dev/en" hreflang="en-US">
-    <link rel="stylesheet" href="/css/style-logical.css">
+    <link rel="stylesheet" href="/css/style-physical.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -203,21 +203,21 @@
                     <h2>Videos de HTML y CSS</h2>
                     <div class="slider">
                         <scroll-container class="slider-container">
-                            <scroll-page class="slider-slide" id="video1">
+                            <scroll-page class="slider-page" id="video1">
                                 <iframe class="video" width="560" height="315"
                                     src="https://www.youtube.com/embed/3nYLTiY5skU?si=mRXs4jxgU1MKbKr2"
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </scroll-page>
-                            <scroll-page class="slider-slide" id="video2">
+                            <scroll-page class="slider-page" id="video2">
                                 <iframe class="video" width="560" height="315"
                                     src="https://www.youtube.com/embed/TlJbu0BMLaY?si=DJ-j2rR2XsxDkwrX"
                                     title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </scroll-page>
-                            <scroll-page class="slider-slide" id="video3">
+                            <scroll-page class="slider-page" id="video3">
                                 <iframe class="video" width="560" height="315"
                                     src="https://www.youtube.com/embed/0uIDvdez63I?si=H7y07X7FOJzUP9B1"
                                     title="YouTube video player" frameborder="0"
@@ -232,8 +232,18 @@
                         </div>
                     </div>
                 </div>
-                <p>si tienes alguna pregunta escribeme a <a href="mailto:me@andersonbsv.com"
-                        target="_blank">andersonbsv@gmail.com</a></p>
+                <aside>
+                    <p>si tienes alguna pregunta escribeme a <a href="mailto:me@andersonbsv.com"
+                            target="_blank">andersonbsv@gmail.com</a></p>
+                </aside>
+                <div class="section-content">
+                    <h2>Suscríbete a mi newsletter</h2>
+                    <form action="#" class="form">
+                        <input type="text" required placeholder="Nombre">
+                        <input type="email" required placeholder="Correo Electrónico">
+                        <input type="submit" value="Suscribirme">
+                    </form>
+                </div>
             </div>
         </div>
     </main>
