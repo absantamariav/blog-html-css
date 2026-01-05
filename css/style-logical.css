@@ -17,9 +17,9 @@ body {
 }
 
 h1 {
-    font-size: 3.75em;
+    font-size: 2em;
     font-weight: bold;
-    margin-block-start: 64px;
+    margin-block-start: 40px;
     margin-block-end: 16px;
 }
 
@@ -54,22 +54,10 @@ h3 {
     margin-block: 16px;
 }
 
-.header {
-    position: sticky;
-    inset-block-start: -45px;
-}
-
-.header-content {
-    position: relative;
-}
-
 header {
+    margin-block-start: 20px;
     font-size: 14px;
     color: var(--white10);
-    position: absolute;
-    inset-block-start: 80px;
-    inset-inline-start: -250px;
-    inline-size: 188px;
 }
 
 header li {
@@ -95,7 +83,8 @@ pre {
     padding: 40px;
     line-height: 24px;
     border: 8px solid #5551FF;
-    box-shadow: -10px 10px 0 0 #ABAAF6;
+    box-shadow: -7px 10px 0 0 #ABAAF6;
+    overflow: auto;
 }
 
 blockquote {
@@ -119,7 +108,7 @@ blockquote p::before {
 
 .hero {
     background-image: linear-gradient(96.07deg, #314755 36.63%, #26A0DA 102.18%);
-    height: 350px;
+    block-size: 96px;
 }
 
 .section-content img {
@@ -164,6 +153,7 @@ blockquote p::before {
 .wrapper {
     max-inline-size: 636px;
     margin-inline: auto;
+    padding-inline: 15px;
 }
 
 .slider-container {
@@ -179,7 +169,7 @@ blockquote p::before {
     margin: 0;
     display: inline-block;
     width: 100%;
-    height: auto;
+    block-size: auto;
     aspect-ratio: 16/9;
 }
 
@@ -208,7 +198,7 @@ aside p {
 
 aside a {
     text-decoration: revert;
-    color: #5551FF;
+    color: #157EFB;
 }
 
 div.section-content:nth-of-type(2) h2 {
@@ -239,4 +229,36 @@ div.section-content:nth-of-type(2) h2 {
 .section-content .form input[type="submit"] {
     background-color: #157EFB;
     border: none;
+}
+
+@media screen and (width >=1170px) {
+    h1 {
+        font-size: 3.75em;
+        font-weight: bold;
+        margin-block-start: 64px;
+        margin-block-end: 16px;
+    }
+
+    .header {
+        position: sticky;
+        inset-block-start: -45px;
+    }
+
+    .header-content {
+        position: relative;
+    }
+
+    header {
+        font-size: 14px;
+        color: var(--white10);
+        position: absolute;
+        inset-block-start: 80px;
+        inset-inline-start: -250px;
+        inline-size: 188px;
+    }
+
+    .hero {
+        background-image: linear-gradient(96.07deg, #314755 36.63%, #26A0DA 102.18%);
+        block-size: 350px;
+    }
 }
